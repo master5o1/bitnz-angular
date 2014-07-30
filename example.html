@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+        <script src="bitnz-angular.js"></script>
+        <script src="example.js"></script>
+
+    </head>
+    <body ng-app="ExampleApp">
+        <div ng-controller="ExampleCtrl">
+            <div>
+                <input ng-model="config.username" placeholder="Username" />
+                <input ng-model="config.key" placeholder="Key" />
+                <input ng-model="config.secret" placeholder="Secret" />
+                <button ng-click="Authorize()">Authorize</button>
+            </div>
+
+            <button ng-click="GetTicker()">Ticker</button>
+            <button ng-click="OrderBook()">OrderBook</button>
+            <button ng-click="Balance()">Balance</button>
+            
+
+            <pre style="margin-top: 50px; border: solid 1px; background: #f1f1f1; padding: 10px;">
+                Config: {{ config }}
+            </pre>
+
+            <img ng-src="{{ GetChart() }}" alt="trade chart" />
+        </div>
+    </body>
+</html>

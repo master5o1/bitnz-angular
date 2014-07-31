@@ -1,0 +1,24 @@
+{
+  "name": "bitnz-angular",
+  "main": "bitnz-angular.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/master5o1/bitnz-angular",
+  "authors": [
+    "Jason Schwarzenberger <jason@master5o1.com>"
+  ],
+  "description": "An Angular.JS service for communicating with the bitNZ API",
+  "keywords": [
+    "angular",
+    "bitnz",
+    "bitcoin",
+    "btc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

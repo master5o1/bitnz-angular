@@ -1,4 +1,5 @@
-angular.module('BitNZ', []).factory('BitNZ', ['$http', '$log', function ($http, $log) {
+
+angular.module('prettyBitnzApp').factory('BitNZ', ['$http', '$log', function ($http, $log) {
   'use strict';
   var api = {};
   var host = 'https://bitnz.com/api/0';
@@ -39,8 +40,9 @@ angular.module('BitNZ', []).factory('BitNZ', ['$http', '$log', function ($http, 
       headers: {}
     };
     if (method === 'GET') {
-      config.params = serialize(parameters);
+      config.params = parameters;
     }
+    $log.log('request', method, action, config);
     if (method === 'POST') {
       config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
     }
@@ -94,7 +96,7 @@ angular.module('BitNZ', []).factory('BitNZ', ['$http', '$log', function ($http, 
 
   api.orderbook = function(group) {
     return get('/orderbook', {
-      group: typeof group === 'undefined' ? 1 : group
+      'group': group || 0
     });
   };
 

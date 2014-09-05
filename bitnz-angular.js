@@ -1,5 +1,5 @@
 
-angular.module('prettyBitnzApp').factory('BitNZ', ['$http', '$log', function ($http, $log) {
+angular.module('BitNZ', []).factory('BitNZ', ['$http', '$log', function ($http, $log) {
   'use strict';
   var api = {};
   var host = 'https://bitnz.com/api/0';
@@ -42,7 +42,6 @@ angular.module('prettyBitnzApp').factory('BitNZ', ['$http', '$log', function ($h
     if (method === 'GET') {
       config.params = parameters;
     }
-    $log.log('request', method, action, config);
     if (method === 'POST') {
       config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
     }

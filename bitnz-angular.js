@@ -94,7 +94,7 @@ angular.module('BitNZ', []).factory('BitNZ', ['$http', '$log', function ($http, 
 
   api.orderbook = function(group) {
     return get('/orderbook', {
-      group: group || 1
+      group: typeof group === 'undefined' ? 1 : group;
     });
   };
 

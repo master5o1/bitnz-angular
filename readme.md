@@ -4,7 +4,7 @@ A basic API Angular service for the [bitNZ API](https://bitnz.com/api). Please r
 
 some doco to do later. In the mean time, see the example.html.
 
-If this wrapper helped you in any way, you can always leave me a tip at (BTC) 1K4Asr83ZCQ1tHDPTM4nnFwNFfiXMiY8Fz
+If this wrapper helped you in any way, you can always leave me a tip at ...
 
 
 Install
